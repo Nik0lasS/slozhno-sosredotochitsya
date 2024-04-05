@@ -1,5 +1,110 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color);
+  font-family: var(--main-font), sans-serif;
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  block-size: max(100vb, 668px);
+}
+
+.decorated-zone::before {
+  position: absolute;
+  align-self: end;
+  content:"";
+  box-sizing: border-box; 
+  width: 25px; 
+  height: 25px;  
+  border-width: 1px 1px 0 0; 
+  border-style: solid; 
+  border-color: #FF0070;
+}
+
+.decorated-zone::after {
+  content:"";
+  display: inline-block;
+  position: absolute;
+  box-sizing: border-box; 
+  width: 25px; 
+  height: 25px;  
+  border-width: 0 0 1px 1px; 
+  border-style: solid; 
+  border-color: #FF0070;
+}
+
+.header__decor {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  color: var(--accent-color);
+  left: 304px;
+  top: 12px;
+}
+
+.header__decor::after {
+  content: "";
+  display: inline-block;
+  margin-inline-start: 10px;
+  border-radius: 50%; 
+  inline-size: 9px; 
+  block-size: 9px; 
+  background: #FF0070; 
+  box-shadow: 0 0 4px 2px #FF0070;
+}
+
+.header__theme-menu {
+  color: var(--accent-color);
+  margin: 10px 0;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.header__theme-menu-button {
+  min-height: 26px;
+  padding: 0 13px;
+  background-color: transparent;
+  border: none;
+  text-transform: lowercase;
+  display:flex;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid #FF0070;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: #DB00FF; 
+  text-shadow: 4px 4px 0 #FF0070;
+}
+
+.header_text {
+  
+}
+
+.title-decor {
+  font-weight: bold;
+  color: var(--text-title-color);
+  background-color: var(--accent-color);
+  line-height: 130%;
 }
