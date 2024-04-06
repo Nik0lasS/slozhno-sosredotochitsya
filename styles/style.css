@@ -5,47 +5,53 @@
   font-family: var(--main-font), sans-serif;
   font-weight: normal;
   color: var(--text-color);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
 }
 
 .header {
-  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   block-size: max(100vb, 668px);
+  padding: 10px;
 }
 
 .decorated-zone::before {
   position: absolute;
+  inset-block-start: 10px;
   align-self: end;
   content:"";
   box-sizing: border-box; 
-  width: 25px; 
-  height: 25px;  
+  inline-size: 25px; 
+  block-size: 25px;  
   border-width: 1px 1px 0 0; 
   border-style: solid; 
-  border-color: #FF0070;
+  border-color: var(--decor-corner-color);
 }
 
 .decorated-zone::after {
   content:"";
-  display: inline-block;
   position: absolute;
+  inset-block-end: 10px;
   box-sizing: border-box; 
-  width: 25px; 
-  height: 25px;  
+  inline-size: 25px; 
+  block-size: 25px;  
   border-width: 0 0 1px 1px; 
   border-style: solid; 
-  border-color: #FF0070;
+  border-color: var(--decor-corner-color);
 }
 
 .header__decor {
-  display: flex;
+  display: var(--decor-visability);
   align-items: center;
   position: absolute;
   color: var(--accent-color);
-  left: 304px;
-  top: 12px;
+  inset-inline-start: 304px;
+  inset-block-start: 11px;
 }
 
 .header__decor::after {
@@ -60,7 +66,7 @@
 }
 
 .header__theme-menu {
-  color: var(--accent-color);
+  color: var(--decor-color);
   margin: 10px 0;
 }
 
@@ -85,21 +91,28 @@
   border: none;
   text-transform: lowercase;
   display:flex;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--decor-hover-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--decor-color);
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid #FF0070;
+  outline: 1px solid var(--decor-color);
+  pointer-events: none;
 }
 
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
-  color: #DB00FF; 
-  text-shadow: 4px 4px 0 #FF0070;
-}
-
-.header_text {
-  
+  color: var(--header-title-color); 
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .title-decor {
@@ -107,4 +120,100 @@
   color: var(--text-title-color);
   background-color: var(--accent-color);
   line-height: 130%;
+  font-size: 18px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px 10px;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main__content-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main__title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 130%;
+  color: var(--decor-color);
+}
+
+.main__title_accent_group {
+  font-weight: normal;
+}
+
+.main__text-link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--accent-color);
+}
+
+.main__text-link:hover {
+  border-bottom: 2px solid var(--text-color);
+}
+
+.main__text-link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.main__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main__gallery-content {
+  display: grid;
+  gap: 10px;
+}
+
+.main__gallery-content-image {
+  width: 100%;
+}
+
+.footer {
+  block-size: max(100vb, 668px);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer::after {
+  content:"";
+  box-sizing: border-box; 
+  inline-size: 25px; 
+  block-size: 25px;  
+  border-width: 0 0 1px 1px; 
+  border-style: solid; 
+  border-color: var(--decor-corner-color);
+}
+
+.footer::before {
+  align-self: flex-end;
+  content:"";
+  box-sizing: border-box; 
+  inline-size: 25px; 
+  block-size: 25px;  
+  border-width: 1px 1px 0 0; 
+  border-style: solid; 
+  border-color: var(--decor-corner-color);
+}
+
+.footer__title {
+  align-self: center;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--header-title-color); 
+  text-shadow: 2px 2px 0 var(--accent-color);
 }

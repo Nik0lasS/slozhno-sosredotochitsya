@@ -1,7 +1,12 @@
 :root {
   --main-font: 'IBM Plex mono';
   --bg-color: #000028;
+  --header-title-color: #DB00FF;
   --text-color: #F1B2CE;
   --text-title-color: #000028;
   --accent-color: #FF0070;
+  --bg-image: url(../images/cover-image-dark.png);
+  --decor-color: #FF0070;
+  --decor-hover-color: rgb(255 0 112 / 0.4);
+  --decor-visability: flex;
 }
