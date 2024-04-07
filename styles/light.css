@@ -5,25 +5,24 @@
 */
 
 .page.theme_light {
-    --bg-color: #FFF1F7;
-    --header-title-color: #FFC2E6;
-    --text-color: #353430;
-    --text-title-color: #353430;
-    --accent-color: #FF8DCB;
-    --bg-image: url(../images/cover-image-light.png);
-    --decor-color: #353430;
-    --decor-hover-color: rgb(53 52 48 / 0.4);
-    --decor-visability: none;
+  --bg-color: #fff1f7;
+  --header-title-color: #ffc2e6;
+  --text-color: #353430;
+  --text-title-color: #353430;
+  --accent-color: #ff8dcb;
+  --bg-image: url(../images/cover-image-light.png);
+  --decor-color: #353430;
+  --decor-hover-color: rgb(53 52 48 / 0.4);
+  --decor-visability: none;
 }
 
 @media (prefers-color-scheme: light) {
-
   :root {
-    --bg-color: #FFF1F7;
-    --header-title-color: #FFC2E6;
+    --bg-color: #fff1f7;
+    --header-title-color: #ffc2e6;
     --text-color: #353430;
     --text-title-color: #353430;
-    --accent-color: #FF8DCB;
+    --accent-color: #ff8dcb;
     --bg-image: url(../images/cover-image-light.png);
     --decor-color: #353430;
     --decor-hover-color: rgb(53 52 48 / 0.4);

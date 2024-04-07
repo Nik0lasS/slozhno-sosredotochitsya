@@ -1,1 +1,1 @@
-https://github.com/Nik0lasS/posmotri_v_okno.git
+https://github.com/Nik0lasS/slozhno-sosredotochitsya.git
