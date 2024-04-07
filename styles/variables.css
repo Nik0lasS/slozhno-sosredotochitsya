@@ -9,4 +9,7 @@
   --decor-color: #FF0070;
   --decor-hover-color: rgb(255 0 112 / 0.4);
   --decor-visability: flex;
+  --page-gap: 40px;
+  --page-padding: 10px;
+  --main-gap: 50px;
 }
