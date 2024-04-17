@@ -180,6 +180,10 @@
   font-weight: normal;
 }
 
+.main__text {
+  line-height: 130%;
+}
+
 .main__text-link {
   text-decoration: none;
   text-shadow: 2px 1px 0 var(--accent-color);
