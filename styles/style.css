@@ -204,12 +204,12 @@
 .main__gallery {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--page-padding);
 }
 
 .main__gallery-content {
   display: grid;
-  gap: 10px;
+  gap: var(--page-padding);
 }
 
 .main__gallery-content-image {
@@ -269,7 +269,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: dense;
-    gap: 20px;
     box-sizing: border-box;
   }
 
@@ -337,12 +336,13 @@
   }
 
   .main__content-article {
-    width: 100%;
+    width: calc(100% - 315px);
   }
 
   .article__what {
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .group__what {
